@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*!
 * Start Bootstrap - Freelancer v6.0.5 (https://startbootstrap.com/theme/freelancer)
 * Copyright 2013-2020 Start Bootstrap
@@ -3968,13 +3968,17 @@ input[type=button].btn-block {
   justify-content: space-between;
 }
 .navbar-brand {
-  display: inline-block;
+    display: inline-block;
+    /*
   padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
-  white-space: nowrap;
+      */
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    /*
+    line-height: inherit;
+        */
+    white-space: nowrap;
 }
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;

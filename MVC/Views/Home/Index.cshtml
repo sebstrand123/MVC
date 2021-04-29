@@ -30,7 +30,7 @@
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
             <div class="divider-custom-line"></div>
         </div>
-        <h1 class="text-center">HÄR VILL JAG HA MINA UTBILDNINGAR</h1>
+        @Html.Action("_Educations", "Home")
     </div>
 </section>
 <!-- Experience Section-->
@@ -44,7 +44,7 @@
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
             <div class="divider-custom-line"></div>
         </div>
-        <h1 class="text-center">HÄR VILL JAG HA MINA ARBETEN</h1>
+        @Html.Action("_Experiences", "Home")
     </div>
 </section>
 <!-- Skills Section-->
@@ -59,20 +59,7 @@
             <div class="divider-custom-line"></div>
         </div>
         <div class="text-center">
-            <ul style="list-style-type: none;">
-                <li>
-                    • Svenska är mitt modersmål
-                </li>
-                <li>
-                    • Goda engelska kunskaper i tal och skrift
-                </li>
-                <li>
-                    • Körkort B
-                </li>
-                <li>
-                    • Truckkort
-                </li>
-            </ul>
+            @Html.Action("_Skills", "Home")
         </div>
     </div>
 </section>

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MVC.DAL;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,19 +14,18 @@ namespace MVC.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
+        private readonly MVCContext db = new MVCContext();
+        public ActionResult _Skills()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            return PartialView("_Skills", db.Skills.ToList());
         }
-
-        public ActionResult Contact()
+        public ActionResult _Educations()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return PartialView("_Educations", db.Educations.ToList());
+        }
+        public ActionResult _Experiences()
+        {
+            return PartialView("_Experiences", db.Experiences.ToList());
         }
     }
 }
