@@ -27,5 +27,9 @@ namespace MVC.Controllers
         {
             return PartialView("_Experiences", db.Experiences.ToList());
         }
+        public ActionResult _Person()
+        {
+            return PartialView("_Person", db.People.ToList());
+        }
     }
 }

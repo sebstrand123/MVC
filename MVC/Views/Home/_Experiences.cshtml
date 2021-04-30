@@ -1,44 +1,20 @@
 ﻿@model IEnumerable<MVC.Models.Experience>
 
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.WorkRole)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CompanyName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StartDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EndDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
+<div class="display-experience">
+@foreach (var item in Model.OrderByDescending(item => item.ID)) {
+    <div class="experience-header">
+        <h3 class="text-uppercase">
             @Html.DisplayFor(modelItem => item.WorkRole)
-        </td>
-        <td>
+        </h3>
+        <p class="lead">@Html.DisplayFor(modelItem => item.StartDate) - @Html.DisplayFor(modelItem => item.EndDate)</p>
+    </div>
+    <div class="experience-body">
+        <h4 class="text-uppercase">
             @Html.DisplayFor(modelItem => item.CompanyName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StartDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EndDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-    </tr>
+        </h4>
+        <p class="lead">@Html.DisplayFor(modelItem => item.Description)</p>
+    </div>
+        
 }
-
-</table>
+</div>

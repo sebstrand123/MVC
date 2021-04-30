@@ -1,13 +1,11 @@
 ﻿@model IEnumerable<MVC.Models.Skills>
 
 
-<table class="table">
+<div class="display-skills">
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-    </tr>
+    <p class="lead">
+        @Html.DisplayFor(modelItem => item.Description)
+    </p>
 }
 
-</table>
+</div>
