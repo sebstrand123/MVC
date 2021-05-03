@@ -2,15 +2,22 @@
 
 
 <div class="display-educations">
-@foreach (var item in Model.OrderByDescending(item => item.ID)) {
-    <div class="educations-header">
-        <h3 class="text-uppercase">@Html.DisplayFor(modelItem => item.Name)</h3>
-        <p class="lead">@Html.DisplayFor(modelItem => item.StartDate) - @Html.DisplayFor(modelItem => item.EndDate)</p>
-    </div>
-    <div class="educations-body">
-        <h4 class="text-uppercase">
-        @Html.DisplayFor(modelItem => item.School)
-        </h4>
-    </div>
-}
+    @foreach (var item in Model.OrderByDescending(item => item.ID))
+    {
+        <div class="educations-header1">
+            <h4 class="text-uppercase">@Html.DisplayFor(modelItem => item.Name) | @Html.DisplayFor(modelItem => item.School)</h4>
+        </div>
+        if (item.EndDate == null)
+        {
+            <div class="educations-body">
+                <p class="lead">@Html.DisplayFor(modelItem => item.StartDate) @Html.DisplayFor(modelItem => item.EndDate)</p>
+            </div>
+        }
+        else
+        {
+            <div class="educations-body">
+                <p class="lead">@Html.DisplayFor(modelItem => item.StartDate) - @Html.DisplayFor(modelItem => item.EndDate)</p>
+            </div>
+        }
+    }
 </div>

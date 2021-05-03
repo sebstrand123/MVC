@@ -138,11 +138,10 @@ strong {
   font-weight: bolder;
 }
 
-/*
+
 small {
   font-size: 80%;
 }
-*/
 
 sub,
 sup {
@@ -9993,6 +9992,12 @@ h3 {
   }
 }
 
+@media (min-width: 600px) {
+    .page-section .page-section-heading {
+        font-size: 1.5rem!important;
+    }
+}
+
 .divider-custom {
   margin: 1.25rem 0 1.5rem;
   width: 100%;
@@ -10255,7 +10260,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 .experience-body p {
-    width: 60%;
+    margin-bottom: 5px;
 }
 
 .display-skills {
@@ -10284,14 +10289,8 @@ form .row:first-child .floating-label-form-group {
     margin-bottom: 3rem!important;
 }
 
-.img-container {
+.lang-container {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
-}
-
-#langImg {
-    width: 100px;
-    height: 100px;
-    margin-left: 10px;
 }
