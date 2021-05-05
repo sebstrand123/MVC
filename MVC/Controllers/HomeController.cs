@@ -1,7 +1,9 @@
 ﻿using MVC.DAL;
+using MVC.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,8 +14,39 @@ namespace MVC.Controllers
     {
         public ActionResult Index()
         {
+            string[] filePaths = Directory.GetFiles(Server.MapPath("~/Files/"));
+
+            List<FileModel> files = new List<FileModel>();
+            foreach (string filePath in filePaths)
+            {
+                files.Add(new FileModel { FileName = Path.GetFileName(filePath) });
+            }
+
             return View();
         }
+
+        public ActionResult _Files()
+        {
+            string[] filePaths = Directory.GetFiles(Server.MapPath("~/Files/"));
+
+            List<FileModel> files = new List<FileModel>();
+            foreach (string filePath in filePaths)
+            {
+                files.Add(new FileModel { FileName = Path.GetFileName(filePath) });
+            }
+
+            return PartialView(files);
+        }
+
+        public FileResult DownloadFile (string fileName)
+        {
+            string path = Server.MapPath("~/Files/") + fileName;
+
+            byte[] bytes = System.IO.File.ReadAllBytes(path);
+
+            return File(bytes, "application/octet-stream", fileName);
+        }
+
         private readonly MVCContext db = new MVCContext();
         public ActionResult _Skills()
         {

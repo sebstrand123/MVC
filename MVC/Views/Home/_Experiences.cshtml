@@ -3,7 +3,7 @@
 
 <div class="display-experience">
 @foreach (var item in Model.OrderByDescending(item => item.ID)) {
-    <div class="experience-header1">
+    <div>
         <h4 class="text-uppercase">
             @Html.DisplayFor(modelItem => item.WorkRole) | @Html.DisplayFor(modelItem => item.CompanyName)
         </h4>

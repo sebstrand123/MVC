@@ -1,0 +1,7 @@
+﻿@using MVC.Models
+@model List<FileModel>
+
+@foreach (FileModel file in Model) 
+{ 
+    @Html.ActionLink("Ladda ner mitt CV i .docx format", "DownloadFile", new { fileName = file.FileName }, new { @class = "btn btn-xl btn-outline-light" })
+}

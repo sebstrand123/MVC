@@ -147,6 +147,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Education.cs" />
     <Compile Include="Models\Experience.cs" />
+    <Compile Include="Models\FileModel.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Skills.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -178,6 +179,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Files\CV - Sebastian Strandberg.docx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -215,6 +217,7 @@
     <Content Include="Views\People\Edit.cshtml" />
     <Content Include="Views\People\Index.cshtml" />
     <Content Include="Views\Home\_Person.cshtml" />
+    <Content Include="Views\Home\_Files.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="assets\img\logos\" />

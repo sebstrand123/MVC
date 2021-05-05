@@ -3,18 +3,18 @@
 }
 
 <!-- Masthead-->
-<header class="masthead bg-primary text-white text-center">
+<header class="masthead bg-primary text-white text-center test-class">
     <div class="container d-flex align-items-center flex-column">
         <!-- Masthead Avatar Image-->
         <img class="masthead-avatar mb-5" src="/assets/img/avataaars.svg" alt="" />
         @Html.Action("_Person", "Home")
-        <p class="masthead-subheading font-weight-light mt-0">
+        <p class="masthead-subheading text-white font-weight-light mt-0">
             Webbutvecklare - Systemutvecklare
         </p>
     </div>
 </header>
 <!-- Education Section-->
-<section class="page-section portfolio" id="education">
+<section class="page-section test-class portfolio" id="education">
     <div class="container">
         <!-- Education Section Heading-->
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Utbildning</h2>
@@ -23,7 +23,7 @@
 </section>
 <hr />
 <!-- Experience Section-->
-<section class="page-section portfolio" id="experience">
+<section class="page-section test-class portfolio" id="experience">
     <div class="container">
         <!-- Experience Section Heading-->
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Erfarenhet</h2>
@@ -32,7 +32,7 @@
 </section>
 <hr />
 <!-- Skills Section-->
-<section class="page-section portfolio" id="skills">
+<section class="page-section test-class portfolio" id="skills">
     <div class="container">
         <!-- Skills Section Heading-->
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Kunskaper</h2>
@@ -41,12 +41,12 @@
         </div>
         <h3 class="text-center text-uppercase text-secondary mb-0">Språk och ramverk jag har erfarenhet i</h3>
         <div class="lang-container">
-            <p class="lead">.NET</p>
-            <p class="lead">C#</p>
-            <p class="lead">GO</p>
-            <p class="lead">Vue.js</p>
-            <p class="lead">React.js</p>
-            <p class="lead">HTML & CSS</p>
+            <p class="lead mr-2">.NET</p>
+            <p class="lead mr-2">C#</p>
+            <p class="lead mr-2">GO</p>
+            <p class="lead mr-2">Vue.js</p>
+            <p class="lead mr-2">React.js</p>
+            <p class="lead mr-2">HTML & CSS</p>
         </div>
     </div>
 </section>
@@ -59,54 +59,6 @@
         <div class="row">
             <div class="col-lg-4 ml-auto"><p class="lead">Jag är en kille på snart 30 år som inte räds att ta på mig nya utmaningar. Jag är driven, lättlärd och lösningsorienterad. Jag valde att utbilda mig till webbutvecklare för den ständiga utvecklingen och de oändliga möjligheterna som finns inom programmering.</p></div>
             <div class="col-lg-4 mr-auto"><p class="lead">På fritiden håller jag mig aktiv. Jag älskar att klättra inomhus som utomhus. Vilket jag upplever gör nytta för både kroppen och huvudet.</p></div>
-        </div>
-        <!-- About Section Button-->
-
-    </div>
-</section>
-<!-- Contact Section-->
-<section class="page-section" id="contact">
-    <div class="container">
-        <!-- Contact Section Heading-->
-        <h2 id="contactHeader" class="page-section-heading text-center text-uppercase text-secondary mb-0">Kontakta mig</h2>
-        <!-- Contact Section Form-->
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                <form id="contactForm" name="sentMessage" novalidate="novalidate">
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Namn</label>
-                            <input class="form-control" id="name" type="text" placeholder="Namn" required="required" data-validation-required-message="Var god att ange ditt namn." />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Epost</label>
-                            <input class="form-control" id="email" type="email" placeholder="Epost adress" required="required" data-validation-required-message="Var god att ange din epost adress." />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Telefonnummer</label>
-                            <input class="form-control" id="phone" type="tel" placeholder="Telefonnummer" required="required" data-validation-required-message="Var god att ange ditt telefonnummer." />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Meddelande</label>
-                            <textarea class="form-control" id="message" rows="5" placeholder="Meddelande" required="required" data-validation-required-message="Var god ange ett meddelande."></textarea>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <br />
-                    <div id="success"></div>
-                    <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Skicka</button></div>
-                </form>
-            </div>
         </div>
     </div>
 </section>

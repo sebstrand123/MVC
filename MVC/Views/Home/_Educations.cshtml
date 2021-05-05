@@ -4,7 +4,7 @@
 <div class="display-educations">
     @foreach (var item in Model.OrderByDescending(item => item.ID))
     {
-        <div class="educations-header1">
+        <div>
             <h4 class="text-uppercase">@Html.DisplayFor(modelItem => item.Name) | @Html.DisplayFor(modelItem => item.School)</h4>
         </div>
         if (item.EndDate == null)
