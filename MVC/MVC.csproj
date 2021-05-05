@@ -211,11 +211,6 @@
     <Content Include="Views\Home\_Skills.cshtml" />
     <Content Include="Views\Home\_Educations.cshtml" />
     <Content Include="Views\Home\_Experiences.cshtml" />
-    <Content Include="Views\People\Create.cshtml" />
-    <Content Include="Views\People\Delete.cshtml" />
-    <Content Include="Views\People\Details.cshtml" />
-    <Content Include="Views\People\Edit.cshtml" />
-    <Content Include="Views\People\Index.cshtml" />
     <Content Include="Views\Home\_Person.cshtml" />
     <Content Include="Views\Home\_Files.cshtml" />
   </ItemGroup>
