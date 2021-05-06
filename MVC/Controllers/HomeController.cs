@@ -14,14 +14,6 @@ namespace MVC.Controllers
     {
         public ActionResult Index()
         {
-            string[] filePaths = Directory.GetFiles(Server.MapPath("~/Files/"));
-
-            List<FileModel> files = new List<FileModel>();
-            foreach (string filePath in filePaths)
-            {
-                files.Add(new FileModel { FileName = Path.GetFileName(filePath) });
-            }
-
             return View();
         }
 
