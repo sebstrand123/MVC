@@ -159,12 +159,7 @@
     </Content>
     <Content Include="assets\img\avataaars.svg" />
     <Content Include="assets\img\favicon.ico" />
-    <Content Include="assets\img\portfolio\cabin.png" />
-    <Content Include="assets\img\portfolio\cake.png" />
-    <Content Include="assets\img\portfolio\circus.png" />
-    <Content Include="assets\img\portfolio\game.png" />
-    <Content Include="assets\img\portfolio\safe.png" />
-    <Content Include="assets\img\portfolio\submarine.png" />
+    <Content Include="assets\img\image.jpg" />
     <Content Include="assets\mail\contact_me.js" />
     <Content Include="assets\mail\contact_me.php" />
     <Content Include="assets\mail\jqBootstrapValidation.js" />
@@ -212,9 +207,7 @@
     <Content Include="Views\Home\_Person.cshtml" />
     <Content Include="Views\Home\_Files.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="assets\img\logos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
