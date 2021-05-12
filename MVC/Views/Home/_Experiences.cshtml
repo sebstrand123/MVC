@@ -2,16 +2,26 @@
 
 
 <div class="display-experience">
-@foreach (var item in Model.OrderByDescending(item => item.ID)) {
-    <div>
-        <h4 class="text-uppercase">
-            @Html.DisplayFor(modelItem => item.WorkRole) | @Html.DisplayFor(modelItem => item.CompanyName)
-        </h4>
-    </div>
-    <div class="experience-body">
-        <p class="lead">@Html.DisplayFor(modelItem => item.StartDate) - @Html.DisplayFor(modelItem => item.EndDate)</p>
-        <p class="lead">@Html.DisplayFor(modelItem => item.Description)</p>
-    </div>
-        
-}
+    @foreach (var item in Model.OrderByDescending(item => item.ID))
+    {
+        <div>
+            <h4 class="text-uppercase">
+                @Html.DisplayFor(modelItem => item.WorkRole) | @Html.DisplayFor(modelItem => item.CompanyName)
+            </h4>
+        </div>
+        if (item.EndDate == null)
+        {
+            <div class="experience-body">
+                <p class="lead">@Html.DisplayFor(modelItem => item.StartDate)</p>
+                <p class="lead">@Html.DisplayFor(modelItem => item.Description)</p>
+            </div>
+        }
+        else
+        {
+            <div class="experience-body">
+                <p class="lead">@Html.DisplayFor(modelItem => item.StartDate) - @Html.DisplayFor(modelItem => item.EndDate)</p>
+                <p class="lead">@Html.DisplayFor(modelItem => item.Description)</p>
+            </div>
+        }
+    }
 </div>
