@@ -1,7 +1,8 @@
 ﻿@using MVC.Models
 @model List<FileModel>
 
-@foreach (FileModel file in Model) 
-{ 
+@foreach (FileModel file in Model)
+{
+    @* Skapad som en knapp med en funktion för att kunna ladda ner mitt CV direkt från hemsidan. *@
     @Html.ActionLink("Ladda ner mitt CV i .docx format", "DownloadFile", new { fileName = file.FileName }, new { @class = "btn btn-xl btn-outline-light" })
 }

@@ -12,11 +12,14 @@ namespace MVC.Controllers
 {
     public class HomeController : Controller
     {
+        //Visar Index sidan.
         public ActionResult Index()
         {
             return View();
         }
 
+        //En partial view med en funktion som letar efter filer i mappen "files" enligt attributen i modellen FileModel.
+        //Implementerad i /Views/Shared/_Footer
         public ActionResult _Files()
         {
             string[] filePaths = Directory.GetFiles(Server.MapPath("~/Files/"));
@@ -30,6 +33,7 @@ namespace MVC.Controllers
             return PartialView(files);
         }
 
+        // Funktion som låter användaren ladda ner mitt CV från hemsidan.
         public FileResult DownloadFile (string fileName)
         {
             string path = Server.MapPath("~/Files/") + fileName;
@@ -39,6 +43,7 @@ namespace MVC.Controllers
             return File(bytes, "application/octet-stream", fileName);
         }
 
+        // Partial views som som hämtar information från respektive tabell i databasen och skickar datan till respektive view.
         private readonly MVCContext db = new MVCContext();
         public ActionResult _Skills()
         {

@@ -7,6 +7,7 @@ using System.Web;
 
 namespace MVC.DAL
 {
+    // Klass som skapar tabeller i databasen enligt de modeller jag skapat i mappen Models.
     public class MVCContext : DbContext
     {
         public MVCContext() : base("MVCContext") { }

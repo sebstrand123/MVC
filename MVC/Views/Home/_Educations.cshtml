@@ -1,12 +1,15 @@
-﻿@model IEnumerable<MVC.Models.Education>
-
+﻿@* Hämtar in och använder modellen av utbildningar.  *@
+@model IEnumerable<MVC.Models.Education>
 
 <div class="display-educations">
+    @* En foreach loop för att plocka ut samtliga rader i tabellen och sortera dem nedåtgående. *@
     @foreach (var item in Model.OrderByDescending(item => item.ID))
     {
-        <div>
-            <h4 class="text-uppercase">@Html.DisplayFor(modelItem => item.Name) | @Html.DisplayFor(modelItem => item.School)</h4>
-        </div>
+    <div>
+        @* Kod som renderar utbildningens och skolans namn. *@
+        <h4 class="text-uppercase">@Html.DisplayFor(modelItem => item.Name) | @Html.DisplayFor(modelItem => item.School)</h4>
+    </div>
+        @* Om utbildningen har ett slutdatum rendera start och slutdatum, annars bara startdatum. *@
         if (item.EndDate == null)
         {
             <div class="educations-body">

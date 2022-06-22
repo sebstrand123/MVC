@@ -1,11 +1,13 @@
-﻿@model IEnumerable<MVC.Models.Skills>
+﻿@* Hämtar in och använder modellen av mina kunskaper.  *@
+@model IEnumerable<MVC.Models.Skills>
 
 
 <div class="display-skills">
-@foreach (var item in Model) {
-    <p class="lead">
-        @Html.DisplayFor(modelItem => item.Description)
-    </p>
-}
+    @foreach (var item in Model)
+    {
+        <p class="lead">
+            @Html.DisplayFor(modelItem => item.Description)
+        </p>
+    }
 
 </div>
